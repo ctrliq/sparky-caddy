@@ -3,7 +3,7 @@
 set -e
 
 if [ "$(rpm -E %"{rhel}")" -eq 10 ]; then
-  sudo dnf copr enable @caddy/caddy
+  sudo dnf copr enable @caddy/caddy -y
 else
   sudo dnf install epel-release -y
 fi
