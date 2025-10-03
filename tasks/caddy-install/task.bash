@@ -34,7 +34,7 @@ example.com {
 # END example.com block
 EOF
 
-mkdir -p /usr/share/caddy/example.com
+sudo mkdir -p /usr/share/caddy/example.com
 echo '<h1>Hi!</h1>' | sudo tee /usr/share/caddy/example.com/index.html
 
 sudo dnf install "https://rpms.remirepo.net/enterprise/remi-release-$(rpm -E '%{rhel}').rpm" -y
