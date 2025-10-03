@@ -44,7 +44,7 @@ if [ ! -f /etc/opt/remi/php83/php-fpm.d/www.conf.orig ]; then
     sudo cp /etc/opt/remi/php83/php-fpm.d/www.conf /etc/opt/remi/php83/php-fpm.d/www.conf.orig
 fi
 
-sed -i 's|^listen = .*|listen = 127.0.0.1:9000|' /etc/opt/remi/php83/php-fpm.d/www.conf
+sudo sed -i 's|^listen = .*|listen = 127.0.0.1:9000|' /etc/opt/remi/php83/php-fpm.d/www.conf
 
 echo '<?php phpinfo(); ?>' | sudo tee /usr/share/caddy/example.com/phpinfo.php
 
